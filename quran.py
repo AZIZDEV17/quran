@@ -22,7 +22,9 @@ def help_command(update,context):
     update.message.reply_text("Buyruqlar:\n/start - Qayta boshlash\n/about - Qur'on haqida\n/surah - Suralar\nMurojaat uchun: @aziz2004official")
 
 def buttons(update,context):
-    pass
+    q=update.callback_query.data
+    if "surah"==q:
+        update.effective_message.reply_text("salom")
 
 def error(update,context):
     print(f"Yangilash: {update} Xatolik: {context.error}")
